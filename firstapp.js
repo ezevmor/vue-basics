@@ -3,4 +3,4 @@ var firstApp = new Vue({
   data: {
     appTitle: 'my first vue app!'
   }
-})
+});
