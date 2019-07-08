@@ -8,14 +8,23 @@
 <body>
   <div id="firstApp">
     <title-component v-bind:title="appTitle"></title-component>
+    <launcherbutton-component 
+      v-bind:callback="callback"
+      v-bind:callbackattrs="[appTitle]"
+    ></launcherbutton-component>
   </div>
 
   <div id="secondApp">
     <title-component v-bind:title="appTitle"></title-component>
+    <launcherbutton-component 
+      v-bind:callback="callback"
+      v-bind:callbackattrs="[firstWord, secondWord]"
+    ></launcherbutton-component>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="components/title.component.js"></script>
+  <script src="components/launcherbutton.component.js"></script>
   <script src="apps/first.app.js"></script>
   <script src="apps/second.app.js"></script>
 </body>
