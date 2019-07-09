@@ -7,12 +7,14 @@
       appTitle: 'my first vue app!',
     },
     methods: {
-      callback: callback
+      callback: function() {
+        callback.apply(this);
+      }
     }
   });
 
-  function callback(title) {
-    console.log('i do something: ' + title);
+  function callback() {
+    console.log('i do something: ' + this.appTitle);
   }
 })()
 
